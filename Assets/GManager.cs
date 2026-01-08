@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using UnityEngine;
 
@@ -6,7 +6,8 @@ public class GManager : MonoBehaviour
 {
     public static GManager instance;
 
-    public string playerName;   // NAMA PLAYER
+    public string playerName;
+    public static event Action OnPlayerNameChanged;
 
     private void Awake()
     {
@@ -18,46 +19,36 @@ public class GManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
-
-        LoadJSONData();
     }
 
-    // =========================
-    // JSON DATA
-    // =========================
     [Serializable]
     class JsonData
     {
-        public string jsonPlayerName;
+        public string playerName;
     }
 
-    // =========================
-    // SAVE
-    // =========================
-    public void SaveJSONData()
+    public void SavePlayer()
     {
-        JsonData data = new JsonData
-        {
-            jsonPlayerName = playerName
-        };
+        if (string.IsNullOrEmpty(playerName)) return;
 
+        JsonData data = new JsonData { playerName = playerName };
         string json = JsonUtility.ToJson(data, true);
-        File.WriteAllText(Application.dataPath + "/savefile.json", json);
+
+        string path = Application.persistentDataPath + "/save_" + playerName + ".json";
+        File.WriteAllText(path, json);
+
+        OnPlayerNameChanged?.Invoke();
     }
 
-    // =========================
-    // LOAD
-    // =========================
-    public void LoadJSONData()
+    public void LoadPlayer(string name)
     {
-        string path = Application.dataPath + "/savefile.json";
+        string path = Application.persistentDataPath + "/save_" + name + ".json";
+        if (!File.Exists(path)) return;
 
-        if (File.Exists(path))
-        {
-            string json = File.ReadAllText(path);
-            JsonData data = JsonUtility.FromJson<JsonData>(json);
+        string json = File.ReadAllText(path);
+        JsonData data = JsonUtility.FromJson<JsonData>(json);
 
-            playerName = data.jsonPlayerName;
-        }
+        playerName = data.playerName;
+        OnPlayerNameChanged?.Invoke();
     }
 }
