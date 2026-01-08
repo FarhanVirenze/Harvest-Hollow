@@ -6,11 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+    path: Assets/Scenes/Splash.unity
+    guid: d4116edd88138c843ba26796ca5a4e98
+  - enabled: 1
+    path: Assets/Scenes/House.unity
+    guid: 87cf35d2e29823e49b77e4b7e3ae5b1b
+  - enabled: 1
     path: Assets/Scenes/Farm.unity
     guid: e1e4da290e6781c488092176233950c5
+  - enabled: 1
+    path: Assets/Scenes/Village.unity
+    guid: 7277343fc12776347adb30bd98731b61
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 56406a0db50213348b64950025d0fbbb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
