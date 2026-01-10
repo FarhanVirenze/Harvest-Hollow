@@ -8,7 +8,7 @@ public class PlayerLook : MonoBehaviour
     [Header("Camera Settings")]
     public float mouseSensitivity = 120f;
     public float distance = 6f;
-    public float height = 3.5f; // 🔥 KUNCI TPS
+    public float height = 3.5f;
 
     public float minY = -20f;
     public float maxY = 60f;
