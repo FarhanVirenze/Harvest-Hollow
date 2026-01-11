@@ -17,6 +17,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryItemPrefab;
     public int maxItemCount = 4;
     public GameObject Inventory;
+    public bool allowInventoryInput = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
@@ -63,6 +64,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!allowInventoryInput) return;
         if (Input.GetKeyDown(KeyCode.E))
         {
             Inventory.SetActive(!Inventory.activeSelf);
