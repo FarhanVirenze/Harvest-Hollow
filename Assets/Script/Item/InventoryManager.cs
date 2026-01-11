@@ -36,6 +36,7 @@ public class InventoryManager : MonoBehaviour
         Inventory.SetActive(false);
         Debug.Log(Inventory);
 
+        Debug.Log(inventoryData.ToString());
     }
 
     public void InitNewGame()
@@ -45,6 +46,7 @@ public class InventoryManager : MonoBehaviour
         foreach (Item item in startItems)
         {
             AddItem(item);
+            Debug.Log("Menambahkan item awal: " + item.itemName);
         }
     }
     void ClearInventory()

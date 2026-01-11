@@ -24,9 +24,11 @@ public class OpeningUI : MonoBehaviour
         }
 
         GManager.instance.playerName = namaInput.text;
+
+        InventoryManager.instance.InitNewGame();
         GManager.instance.SavePlayer();
 
-        // 🔥 REFRESH DROPDOWN BIAR REALTIME
+        
         loadDropdown.ShowDropdown();
 
         Debug.Log("Player disimpan & aktif: " + GManager.instance.playerName);
