@@ -38,33 +38,4 @@ public class PlantGrowth : MonoBehaviour
         currentStage++;
         SpawnStage();
     }
-
-    public bool IsFullyGrown()
-    {
-        return currentStage == growthStagePrefabs.Length - 1;
-    }
-
-    public void Harvest()
-    {
-        if (!IsFullyGrown())
-        {
-            Debug.Log("Tanaman belum siap panen");
-            return;
-        }
-
-        for (int i = 0; i < harvestAmount; i++)
-        {
-            InventoryManager.instance.AddItem(harvestItem);
-        }
-
-        TileGround tile = GetComponentInParent<TileGround>();
-        if (tile != null)
-        {
-            tile.ResetToNormal();
-        }
-
-        Destroy(gameObject);
-
-        Debug.Log("Panen berhasil");
-    }
 }

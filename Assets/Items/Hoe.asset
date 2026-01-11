@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f573cbe3088bdb46bb81fb5bf5bf36d, type: 3}
   m_Name: Hoe
   m_EditorClassIdentifier: Assembly-CSharp::Hoe
+  id: 2
   itemName: Hoe
   image: {fileID: 21300000, guid: a519936499ff8fc47aac652dc8e1b8a5, type: 3}
   stackable: 0

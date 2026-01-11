@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public abstract class Item : ScriptableObject
 {
     [Header("Item Property")]
+    public string id;
     public string itemName;
     public Sprite image;
     public bool stackable = true;

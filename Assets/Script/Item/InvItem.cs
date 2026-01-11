@@ -10,7 +10,7 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InitItem(item);
+
     }
 
     // Update is called once per frame
@@ -27,9 +27,10 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         countText.raycastTarget = false;
     }
 
-    public void InitItem (Item newItem)
+    public void InitItem (Item newItem, int newCount = 1)
     {
         item = newItem;
+        count = newCount;
         img.sprite = item.image;
         refreshCount();
     }

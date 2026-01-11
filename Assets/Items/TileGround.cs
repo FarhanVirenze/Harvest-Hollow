@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TileGround : MonoBehaviour
@@ -7,6 +8,8 @@ public class TileGround : MonoBehaviour
     public GameObject tilledGroundPrefab;
     public GameObject wateredGroundPrefab;
     private GameObject currentGround;
+    public GameObject plantPrefab;
+    public Item cornseed;
 
     public Transform plantPoint;
     private enum GroundState { Normal, Tilled, Watered, Planted }
@@ -42,8 +45,9 @@ public class TileGround : MonoBehaviour
         return currentState == GroundState.Watered;
     }
 
-    public void Plant(GameObject plantPrefab)
+    public void Plant()
     {
+        
         if (!CanPlant()) return;
 
         Instantiate(
@@ -52,23 +56,42 @@ public class TileGround : MonoBehaviour
             Quaternion.identity,
             transform
         );
+        Item selectedItem = InventoryManager.instance.GetSelectedItem(true);
 
         currentState = GroundState.Planted;
         Debug.Log("Tanaman ditanam");
     }
     public void ResetToNormal()
     {
-        if (currentGround != null)
+        if (currentState == GroundState.Planted)
+        {
             Destroy(currentGround);
-
-        currentGround = Instantiate(
-            normalGroundPrefab,
-            transform.position,
-            Quaternion.identity,
-            transform
-        );
-
-        currentState = GroundState.Normal;
+            currentState = GroundState.Normal;
+            Debug.Log(currentState);
+            Debug.Log(CanPlant());
+        }
     }
+    public bool Harvest()
+    {
+        if (currentState != GroundState.Planted) return false;
 
+        PlantGrowth plant = GetComponentInChildren<PlantGrowth>();
+        if (plant == null) return false;
+
+        if (plant.currentStage != 2)
+        {
+            Debug.Log("Tanaman belum siap panen");
+            return false;
+        }
+
+        Destroy(plant.gameObject);
+        ResetToNormal();
+        for (int i = 0; i < 3; i++)
+        {
+            InventoryManager.instance.AddItem(cornseed);
+        }
+       
+        Debug.Log("Panen berhasil, tanah kembali normal");
+        return true;
+    }
 }

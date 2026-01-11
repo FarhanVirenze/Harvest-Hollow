@@ -49,3 +49,5 @@ MonoBehaviour:
   - {fileID: 5962430241588196273, guid: ff4ed0f60d4a5a54b9b1a0b2fad77c78, type: 3}
   - {fileID: 2658104347403863969, guid: 530671a6dcce5b84992a7417b0d91c86, type: 3}
   currentStage: 0
+  harvestItem: {fileID: 11400000, guid: 9dd749b60cf40634292b7b07b2da3bfb, type: 2}
+  harvestAmount: 3

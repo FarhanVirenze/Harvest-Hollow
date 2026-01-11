@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 644824190871526274}
   - component: {fileID: 3213329670164086185}
   - component: {fileID: 5197126858805654705}
-  - component: {fileID: 7272648890507834522}
   m_Layer: 6
   m_Name: 3D_Tile_Ground_01
   m_TagString: Untagged
@@ -129,28 +128,9 @@ MonoBehaviour:
   normalGroundPrefab: {fileID: 1437242426805090903}
   tilledGroundPrefab: {fileID: 7407277059092317233, guid: 09fcd8699d3665941a8ef6696320e444, type: 3}
   wateredGroundPrefab: {fileID: 1787263219254001300, guid: c7c54066debef28409bc2fe39152fe52, type: 3}
+  plantPrefab: {fileID: 1799823186811655227, guid: 94b726ccb28e71c4fb7b3e7dd5526dba, type: 3}
+  cornseed: {fileID: 11400000, guid: 9dd749b60cf40634292b7b07b2da3bfb, type: 2}
   plantPoint: {fileID: 3937772045768039703}
---- !u!65 &7272648890507834522
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437242426805090903}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: -0.000000059604645, y: 1, z: 0.000000059604645}
 --- !u!1 &1772937034504632845
 GameObject:
   m_ObjectHideFlags: 0

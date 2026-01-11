@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca41f4112cbd31459e7ff08bc11bacc, type: 3}
   m_Name: CornSeed
   m_EditorClassIdentifier: Assembly-CSharp::CornSeed
+  id: 1
   itemName: Corn
   image: {fileID: 21300000, guid: a56b346382de1474ab71651b030ec767, type: 3}
   stackable: 1
-  cornPlantPrefab: {fileID: 1799823186811655227, guid: 94b726ccb28e71c4fb7b3e7dd5526dba, type: 3}
   range: 12

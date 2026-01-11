@@ -30,6 +30,11 @@ public class ToolController : MonoBehaviour
                 Debug.Log("Menggunakan benih jagung");
                 UseTool(cornSeed.range, cornSeed);
             }
+            else if(activeItem is Sickle sickle)
+            {
+                Debug.Log("Menggunakan Arit");
+                UseTool(sickle.range, sickle);
+            }
         }
     }
 
@@ -69,12 +74,18 @@ public class ToolController : MonoBehaviour
                         used = wateringCan.Use(hit);
                         Debug.Log("Menggunakan penyiram pada tile: " + tile.name);
                     }
-                    if (tool is CornSeed corn)
+                    else if (tool is CornSeed corn)
                     {
                         used = corn.Use(hit);
                         Debug.Log("Tool berhasil digunakan pada tile: " + tile.name);
-                        break; // Hentikan setelah tool berhasil digunakan
+                        break;
+                    } else if (tool is Sickle sickle)
+                    {
+                        used = sickle.Use(hit);
+                        Debug.Log("Tool berhasil digunakan pada tile: " + tile.name);
+                        break;
                     }
+
                 }
             }
         }
