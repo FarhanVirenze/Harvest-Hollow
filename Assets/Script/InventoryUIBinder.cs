@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InventoryUIBinder : MonoBehaviour
 {
@@ -15,5 +16,13 @@ public class InventoryUIBinder : MonoBehaviour
         inv.RebuildUIFromData();
 
         Debug.Log("Inventory UI berhasil di-bind ulang");
+    }
+    public void saveGame()
+    {
+        GManager.instance.SavePlayer();
+    }
+    public void exitGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }

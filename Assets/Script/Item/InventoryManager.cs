@@ -262,8 +262,17 @@ public class InventoryManager : MonoBehaviour
     {
         if (invSlots == null || invSlots.Length == 0)
         {
-            Debug.LogWarning("Sync gagal: invSlots null");
+            Debug.Log("Sync dilewati: UI belum ter-bind");
             return;
+        }
+
+        for (int i = 0; i < invSlots.Length; i++)
+        {
+            if (invSlots[i] == null)
+            {
+                Debug.Log("Slot null (scene lama), sync dibatalkan");
+                return;
+            }
         }
 
         inventoryData = new InventorySlotData[invSlots.Length];
@@ -271,26 +280,10 @@ public class InventoryManager : MonoBehaviour
         for (int i = 0; i < invSlots.Length; i++)
         {
             InvItem item = invSlots[i].GetComponentInChildren<InvItem>();
-
-            if (item != null)
-            {
-                inventoryData[i] = new InventorySlotData
-                {
-                    itemID = item.item.id,
-                    count = item.count
-                };
-            }
-            else
-            {
-                inventoryData[i] = new InventorySlotData
-                {
-                    itemID = "",
-                    count = 0
-                };
-            }
+            inventoryData[i] = item != null
+                ? new InventorySlotData { itemID = item.item.id, count = item.count }
+                : new InventorySlotData { itemID = "", count = 0 };
         }
-
-        Debug.Log("Inventory DATA tersimpan");
     }
     public void RebuildUIFromData()
     {
@@ -315,6 +308,12 @@ public class InventoryManager : MonoBehaviour
         }
 
         Debug.Log("Inventory UI dibangun ulang dari DATA");
+    }
+    public void UnbindUI()
+    {
+        invSlots = null;
+        Inventory = null;
+        Debug.Log("Inventory UI dilepas");
     }
 
 }
