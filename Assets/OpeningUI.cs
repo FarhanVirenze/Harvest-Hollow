@@ -10,6 +10,7 @@ public class OpeningUI : MonoBehaviour
     void Start()
     {
         namaInput.text = "";
+        InventoryManager.instance.allowInventoryInput = false;
     }
 
     public void SaveGame()
@@ -39,6 +40,7 @@ public class OpeningUI : MonoBehaviour
         if (!string.IsNullOrEmpty(GManager.instance.playerName))
         {
             Debug.Log("PLAY AS: " + GManager.instance.playerName);
+            InventoryManager.instance.allowInventoryInput = true;
             SceneManager.LoadScene(1);
             return;
         }
