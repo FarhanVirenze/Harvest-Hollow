@@ -244,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OpeningUI
   namaInput: {fileID: 1516806692}
   loadDropdown: {fileID: 11900196}
+  go: {fileID: 864799738}
 --- !u!114 &11900196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,11 +839,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b72ede437ca48f47aa32cdd416cbd36, type: 3}
---- !u!1 &519590893 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3813784523918872740, guid: 789038673339ee44da56fabd4be00a04, type: 3}
-  m_PrefabInstance: {fileID: 1970680705}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &565435266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,48 +1268,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7230368062029965704, guid: 789038673339ee44da56fabd4be00a04, type: 3}
   m_PrefabInstance: {fileID: 1970680705}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &864799743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864799738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d8c96c97724fe41bee3a8401b30b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryUIBinder
-  invSlots:
-  - {fileID: 1970680733}
-  - {fileID: 1970680732}
-  - {fileID: 1970680731}
-  - {fileID: 1970680730}
-  - {fileID: 1970680729}
-  - {fileID: 1970680728}
-  - {fileID: 1970680727}
-  - {fileID: 1970680726}
-  - {fileID: 1970680725}
-  - {fileID: 1970680724}
-  - {fileID: 1970680723}
-  - {fileID: 1970680722}
-  - {fileID: 1970680721}
-  - {fileID: 1970680720}
-  - {fileID: 1970680719}
-  - {fileID: 1970680718}
-  - {fileID: 1970680717}
-  - {fileID: 1970680716}
-  - {fileID: 1970680715}
-  - {fileID: 1970680714}
-  - {fileID: 1970680713}
-  - {fileID: 1970680712}
-  - {fileID: 1970680711}
-  - {fileID: 1970680710}
-  - {fileID: 1970680709}
-  - {fileID: 1970680708}
-  - {fileID: 1970680707}
-  - {fileID: 1970680706}
-  inventoryPanel: {fileID: 519590893}
 --- !u!1001 &980097634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3063,6 +3017,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1838803054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838803056}
+  - component: {fileID: 1838803055}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1838803055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838803054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d8c96c97724fe41bee3a8401b30b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUIBinder
+  invSlots:
+  - {fileID: 1970680733}
+  - {fileID: 1970680732}
+  - {fileID: 1970680731}
+  - {fileID: 1970680730}
+  - {fileID: 1970680729}
+  - {fileID: 1970680728}
+  - {fileID: 1970680727}
+  - {fileID: 1970680726}
+  - {fileID: 1970680725}
+  - {fileID: 1970680724}
+  - {fileID: 1970680723}
+  - {fileID: 1970680722}
+  - {fileID: 1970680721}
+  - {fileID: 1970680720}
+  - {fileID: 1970680719}
+  - {fileID: 1970680718}
+  - {fileID: 1970680717}
+  - {fileID: 1970680716}
+  - {fileID: 1970680715}
+  - {fileID: 1970680714}
+  - {fileID: 1970680713}
+  - {fileID: 1970680712}
+  - {fileID: 1970680711}
+  - {fileID: 1970680710}
+  - {fileID: 1970680709}
+  - {fileID: 1970680708}
+  - {fileID: 1970680707}
+  - {fileID: 1970680706}
+  inventoryPanel: {fileID: 864799738}
+--- !u!4 &1838803056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838803054}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 259.26358, y: 0, z: 1998.1543}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1840841617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3744,6 +3772,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 92487215939003001, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 92487215939003001, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 92487215939003001, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 92487215939003001, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 92487215939003001, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 92487215939003001, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 589570025455356540, guid: 789038673339ee44da56fabd4be00a04, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4380,6 +4432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7230368062029965704, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7290641489980765693, guid: 789038673339ee44da56fabd4be00a04, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4497,16 +4553,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8549573455291080889, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554204201164457569, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554204201164457569, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554204201164457569, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554204201164457569, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554204201164457569, guid: 789038673339ee44da56fabd4be00a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554204201164457569, guid: 789038673339ee44da56fabd4be00a04, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7230368062029965704, guid: 789038673339ee44da56fabd4be00a04, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 864799743}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789038673339ee44da56fabd4be00a04, type: 3}
 --- !u!114 &1970680706 stripped
 MonoBehaviour:
@@ -5267,4 +5344,5 @@ SceneRoots:
   - {fileID: 413536501}
   - {fileID: 980097634}
   - {fileID: 1970680705}
+  - {fileID: 1838803056}
   - {fileID: 373749539}

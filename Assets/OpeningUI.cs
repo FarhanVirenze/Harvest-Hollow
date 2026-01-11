@@ -6,11 +6,13 @@ public class OpeningUI : MonoBehaviour
 {
     public TMP_InputField namaInput;
     public LoadGameDropdown loadDropdown;
+    public GameObject go;
 
     void Start()
     {
         namaInput.text = "";
         InventoryManager.instance.allowInventoryInput = false;
+        go.SetActive(false);
     }
 
     public void SaveGame()
